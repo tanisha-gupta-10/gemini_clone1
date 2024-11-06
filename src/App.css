@@ -1,0 +1,287 @@
+#root {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Nunito', sans-serif;
+  width: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.sidebar {
+  height: 100vh;
+  /* position: fixed; */
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  /* border-right: 1px solid rgb(194, 194, 194); */
+  background-color: #f1f1f1;
+  transition: width 0.3s ease;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-menu ul li a span {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.collapsed .sidebar-menu ul li a span {
+  opacity: 0;
+  /* Hide text in collapsed state */
+}
+
+.sidebar-header {
+  padding: 15px 20px;
+}
+
+hr {
+  margin: 0;
+  background-color: rgb(194, 194, 194);
+}
+
+.sidebar-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  flex-direction: column;
+  padding: 10px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 10px;
+}
+
+li:hover {
+  background-color: rgb(236, 236, 236);
+  border-radius: 40px;
+}
+
+.collapsed {
+  width: 65px;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+a:hover {
+  color: black;
+}
+
+.newChat {
+  background-color: rgb(236, 236, 236);
+  padding: 15px;
+  border-radius: 40px;
+}
+
+.top li:first-child {
+  padding: 0;
+}
+
+.newChat:hover {
+  pointer-events: none;
+  color: inherit;
+  background-color: inherit;
+}
+
+.mainPart {
+  width: 100%;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.topPart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.brandName {
+  font-size: 26px;
+  /* font-weight: 600; */
+  color: #999999;
+}
+
+.topPart img,
+.resultPart img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.resultPart {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+
+.resutTitle,
+.resultData {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.resultData {
+  align-items: flex-start;
+}
+
+.greetPart {
+  font-size: 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.greetMsg {
+  color: #0618b9;
+  font-weight: 700;
+}
+
+.subGreet {
+  color: #666666;
+  font-size: 36px;
+}
+
+.ques {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  justify-content: center;
+}
+
+.card {
+  padding: 10px;
+  width: calc(100% / 4 - 10px);
+  background: #f0f4f9;
+  border: none;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #f0f4f9;
+  padding: 10px 20px;
+  border-radius: 50px;
+  /* left: 0 */
+}
+
+.answer {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 2 ;
+}
+
+.searchBox input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: transparent;
+  border-color: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.animated-bg {
+  border-radius: 4px;
+  border: none;
+  animation: loader 3s infinite linear;
+  background-color: #f6f7f8;
+  background: linear-gradient(to right, #9ed7ff, #fff, #9ed7ff);
+  background-size: 800px 50px;
+  height: 20px;
+}
+
+@keyframes loader {
+  0% {
+    background-position: -800px 0;
+  }
+
+  100% {
+    background-position: 800px 0;
+  }
+}
+
+.inputSec {
+  position: fixed;
+  bottom: 0;
+  width: -webkit-fill-available;
+  background: white; 
+  padding: 10px 0 30px;
+}
