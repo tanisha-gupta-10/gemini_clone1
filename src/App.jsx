@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import './App.css';
 import Sidebar from './components/Sidebar/Sidebar';
 import Gemini from './components/Main/Gemini';
-import { run } from './config/gemini';  // Correct import
+import { run, processImageAndCaption } from './config/gemini';  // Correct import
 
 function App() {
   const [collapsed, setCollapsed] = useState(true);
@@ -38,6 +38,7 @@ function App() {
       const answer = await run(que);
       const newAnswer = answer.split(" ");
 
+      processImageAndCaption();
       // Clear the answer state initially
 
       const isExistingQuestion = allQs.some((q) => q.question === que);
